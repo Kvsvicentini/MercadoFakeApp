@@ -9,16 +9,22 @@
         android:orientation="vertical">
 
         <ImageView
+            android:scaleType="fitCenter"
             android:id="@+id/modImagemProduto"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="250dp"
-            android:src="#2c2c2c" />
+            android:src="@drawable/controle_videogame" />
 
         <TextView
+            android:id="@+id/modTituloProduto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5sp"
+            android:fontFamily="@font/poppins_extrabold"
             android:text="Título do Produto"
-            android:id="@+id/modTituloProduto"/>
+            android:textAlignment="center"
+            android:textSize="15sp" />
 
     </LinearLayout>
 
