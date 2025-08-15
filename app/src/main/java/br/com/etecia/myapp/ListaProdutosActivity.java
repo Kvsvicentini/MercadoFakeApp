@@ -1,12 +1,15 @@
 package br.com.etecia.myapp;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -42,6 +45,14 @@ public class ListaProdutosActivity extends AppCompatActivity {
         lstProdutos.add(new Produtos("Controle",R.drawable.controle_videogame));
 
         idListaProdutos = findViewById(R.id.ListaProdutos);
+
+        //Criando layout
+        idListaProdutos.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+
+        //Instânciar o adaptador
+        AdaptadorProdutos adapter = new AdaptadorProdutos(getApplicationContext(),lstProdutos);
+
+        idListaProdutos.setAdapter(adapter);
 
     }
 }
